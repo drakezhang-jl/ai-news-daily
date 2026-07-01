@@ -8,123 +8,51 @@
     :root{--bg:#0b0d14;--card:#13151f;--card2:#1a1d2a;--text:#e2e8f0;--muted:#64748b;--border:#1e2236;}
     *{box-sizing:border-box;margin:0;padding:0;}
     body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;}
-
-    /* ── Header ── */
-    header{
-      background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-      padding:3rem 1.5rem 2rem;
-      text-align:center;
-      position:relative;
-      overflow:hidden;
-    }
-    header::before{
-      content:'';position:absolute;inset:0;
-      background:radial-gradient(ellipse at 50% 0%,rgba(99,102,241,.25),transparent 70%);
-    }
-    header h1{
-      font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;letter-spacing:-.02em;
-      background:linear-gradient(90deg,#a78bfa,#60a5fa,#34d399);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-      position:relative;
-    }
+    header{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);padding:3rem 1.5rem 2rem;text-align:center;position:relative;overflow:hidden;}
+    header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(99,102,241,.3),transparent 70%);}
+    header h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;letter-spacing:-.02em;background:linear-gradient(90deg,#a78bfa,#60a5fa,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;}
     header .sub{color:#94a3b8;margin-top:.5rem;font-size:.95rem;position:relative;}
-    .meta-bar{
-      display:flex;align-items:center;justify-content:center;gap:.75rem;
-      margin-top:1.25rem;flex-wrap:wrap;position:relative;
-    }
-    .chip{
-      padding:.3rem .9rem;border-radius:99px;font-size:.78rem;font-weight:600;
-      border:1px solid;
-    }
+    .meta-bar{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap;position:relative;}
+    .chip{padding:.3rem .9rem;border-radius:99px;font-size:.78rem;font-weight:600;border:1px solid;}
     .chip-time{background:rgba(99,102,241,.12);border-color:rgba(99,102,241,.3);color:#a5b4fc;}
     .chip-auto{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3);color:#6ee7b7;}
     .chip-ai{background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.3);color:#fcd34d;}
-
-    /* ── Main ── */
     main{max-width:1280px;margin:0 auto;padding:2.5rem 1.5rem 4rem;}
-
-    /* ── Section ── */
     .section{margin-bottom:3.5rem;}
-    .section-head{
-      display:flex;align-items:center;gap:.75rem;
-      padding-bottom:1rem;margin-bottom:1.5rem;
-      border-bottom:1px solid var(--border);
-    }
+    .section-head{display:flex;align-items:center;gap:.75rem;padding-bottom:1rem;margin-bottom:1.5rem;border-bottom:1px solid var(--border);}
     .section-icon{font-size:1.6rem;}
     .section-title{font-size:1.2rem;font-weight:700;}
-    .live-dot{
-      width:8px;height:8px;border-radius:50%;margin-left:auto;
-      animation:pulse 2s infinite;
-    }
+    .live-dot{width:8px;height:8px;border-radius:50%;margin-left:auto;animation:pulse 2s infinite;}
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.4);}}
-
-    /* ── Grid ── */
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;}
-
-    /* ── Card ── */
-    .card{
-      background:var(--card);border:1px solid var(--border);border-radius:16px;
-      overflow:hidden;display:flex;flex-direction:column;
-      transition:transform .2s,border-color .2s,box-shadow .2s;
-      text-decoration:none;color:inherit;
-    }
-    .card:hover{
-      transform:translateY(-4px);
-      border-color:#4f46e5;
-      box-shadow:0 8px 30px rgba(79,70,229,.15);
-    }
-    .card-img{width:100%;height:170px;object-fit:cover;background:var(--card2);display:block;}
-    .card-placeholder{
-      width:100%;height:170px;
-      background:linear-gradient(135deg,var(--card2),var(--border));
-      display:flex;align-items:center;justify-content:center;font-size:3rem;
-    }
-    .card-body{padding:1.1rem;flex:1;display:flex;flex-direction:column;gap:.6rem;}
-    .card-meta{display:flex;align-items:center;gap:.5rem;font-size:.73rem;color:var(--muted);}
-    .source-tag{
-      padding:.15rem .55rem;border-radius:5px;
-      background:var(--card2);font-weight:700;color:#94a3b8;
-    }
-    .card-title{font-size:.95rem;font-weight:700;line-height:1.45;}
-    .card-desc{
-      font-size:.82rem;color:var(--muted);line-height:1.6;
-      display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
-    }
-    .card-cta{
-      margin-top:auto;display:inline-flex;align-items:center;gap:.35rem;
-      font-size:.78rem;font-weight:600;color:#818cf8;
-    }
-
-    /* ── Empty ── */
-    .empty{
-      padding:2.5rem;text-align:center;color:var(--muted);
-      background:var(--card);border-radius:16px;
-      border:1px dashed var(--border);font-size:.9rem;
-    }
-
-    /* ── Footer ── */
-    footer{
-      text-align:center;padding:2rem;color:var(--muted);font-size:.78rem;
-      border-top:1px solid var(--border);
-    }
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;text-decoration:none;color:inherit;}
+    .card:hover{transform:translateY(-4px);border-color:#6366f1;box-shadow:0 12px 36px rgba(99,102,241,.18);}
+    .card-img-wrap{width:100%;height:185px;overflow:hidden;background:var(--card2);}
+    .card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+    .card:hover .card-img{transform:scale(1.04);}
+    .card-ph{width:100%;height:185px;display:flex;align-items:center;justify-content:center;font-size:3rem;}
+    .card-body{padding:1.1rem;flex:1;display:flex;flex-direction:column;gap:.55rem;}
+    .card-meta{display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--muted);}
+    .source-tag{padding:.15rem .5rem;border-radius:4px;background:var(--card2);font-weight:700;color:#94a3b8;}
+    .card-title{font-size:.94rem;font-weight:700;line-height:1.45;}
+    .card-desc{font-size:.81rem;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+    .card-cta{margin-top:auto;font-size:.78rem;font-weight:600;color:#818cf8;}
+    footer{text-align:center;padding:2rem;color:var(--muted);font-size:.78rem;border-top:1px solid var(--border);}
     footer a{color:#6366f1;text-decoration:none;}
   </style>
 </head>
 <body>
-
 <header>
   <h1>⚡ AI 产品日报</h1>
   <p class="sub">每日自动聚合 · AI 产品 &amp; 穿戴设备 &amp; 硬件前沿</p>
   <div class="meta-bar">
-    <span class="chip chip-time">🕐 2026年07月01日 10:26 BJT</span>
+    <span class="chip chip-time">🕐 2026年07月01日 10:32 BJT</span>
     <span class="chip chip-auto">⚙️ Claude AI 自动生成</span>
     <span class="chip chip-ai">✨ AI 内容总结</span>
   </div>
 </header>
-
 <main>
 
-<!-- ── AI 产品 & 应用 ── -->
 <section class="section">
   <div class="section-head">
     <span class="section-icon">🤖</span>
@@ -132,51 +60,45 @@
     <div class="live-dot" style="background:#a78bfa"></div>
   </div>
   <div class="grid">
-
     <a class="card" href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">
-      <div class="card-placeholder">🔍</div>
+      <div class="card-img-wrap"><img class="card-img" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_AI_and_search_engine_v46_16x9_1.width-1300.jpg" alt="" loading="lazy"></div>
       <div class="card-body">
-        <div class="card-meta"><span class="source-tag">Google</span><span>2026-07</span></div>
+        <div class="card-meta"><span class="source-tag">Google Blog</span><span>2026-07</span></div>
         <div class="card-title">Google Search AI 模式全面升级：Gemini 3.5 Flash 成为默认引擎</div>
         <div class="card-desc">Google 将 Gemini 3.5 Flash 设为 AI Mode 全球默认模型，信息代理功能将率先向 Google AI Pro & Ultra 订阅者开放。该模型将前沿智能与行动能力结合，是谷歌最新一代模型系列中的首款。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
     <a class="card" href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener">
-      <div class="card-placeholder">🍎</div>
+      <div class="card-img-wrap"><img class="card-img" src="https://www.apple.com/newsroom/images/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/tile/Apple-OS-27-updates-260608-lp.jpg.og.jpg?202606301659" alt="" loading="lazy"></div>
       <div class="card-body">
-        <div class="card-meta"><span class="source-tag">Apple</span><span>2026-06</span></div>
+        <div class="card-meta"><span class="source-tag">Apple Newsroom</span><span>2026-06</span></div>
         <div class="card-title">Apple Intelligence 新一代发布：Siri AI 全面进化</div>
         <div class="card-desc">苹果在 WWDC 2026 上预览了下一代 Apple Intelligence 和全新 Siri AI，带来更强的上下文理解、更深的系统集成以及全新多模态交互能力，将随今秋系统更新推送。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
     <a class="card" href="https://www.amd.com/en/corporate/events/advancing-ai.html" target="_blank" rel="noopener">
-      <div class="card-placeholder">🏭</div>
+      <div class="card-img-wrap"><img class="card-img" src="https://www.amd.com/content/dam/amd/en/images/logos/corporate/4796850-aai-2026-tile.jpg" alt="" loading="lazy"></div>
       <div class="card-body">
         <div class="card-meta"><span class="source-tag">AMD</span><span>2026-07</span></div>
-        <div class="card-title">AMD Advancing AI 2026：Helios 架构亮相旧金山</div>
+        <div class="card-title">AMD Advancing AI 2026：Helios 架构亮相旧金山峰会</div>
         <div class="card-desc">AMD 将于 7 月 22-23 日在旧金山举办 Advancing AI 2026 大会，重点展示 AMD Helios 架构如何支撑大规模训练、推理及智能体工作负载，吸引全球 AI 基础设施领域目光。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
     <a class="card" href="https://openai.com/news/product-releases/" target="_blank" rel="noopener">
-      <div class="card-placeholder">💬</div>
+      <div class="card-ph" style="background:linear-gradient(135deg,#10a37f,#0a6b53)">💬</div>
       <div class="card-body">
         <div class="card-meta"><span class="source-tag">OpenAI</span><span>2026-06</span></div>
-        <div class="card-title">OpenAI 企业版新增用量分析与支出管控功能</div>
+        <div class="card-title">OpenAI 企业版推出用量分析与支出管控新功能</div>
         <div class="card-desc">OpenAI 于 6 月 26 日推出全新企业级用量分析面板和升级版支出管控工具，帮助企业更精细地追踪 API 消耗、制定预算警报，进一步完善企业 AI 治理能力。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
   </div>
 </section>
 
-<!-- ── AI 穿戴设备 ── -->
 <section class="section">
   <div class="section-head">
     <span class="section-icon">⌚</span>
@@ -184,51 +106,45 @@
     <div class="live-dot" style="background:#60a5fa"></div>
   </div>
   <div class="grid">
-
     <a class="card" href="https://the-gadgeteer.com/2026/03/31/forget-oura-this-2-2mm-ring-also-controls-smart-glasses/" target="_blank" rel="noopener">
-      <div class="card-placeholder">💍</div>
+      <div class="card-img-wrap"><img class="card-img" src="https://the-gadgeteer.com/wp-content/uploads/2026/03/MOVA-Launches-Smart-Ring-H1-and-Smart-Glasses-S1-2.jpg" alt="" loading="lazy"></div>
       <div class="card-body">
         <div class="card-meta"><span class="source-tag">The Gadgeteer</span><span>2026-03</span></div>
-        <div class="card-title">MOVA Smart Ring H1 + 智能眼镜 S1：最薄 AI 穿戴组合亮相</div>
-        <div class="card-desc">MOVA 发布 2.2mm 超薄智能戒指 H1 搭配 S1 智能眼镜，构成一套完整的 AI 穿戴系统。戒指负责读取身体数据，眼镜感知周边环境，支持 77 语言实时翻译、AR 导航和 AI 提词器功能。</div>
+        <div class="card-title">MOVA Smart Ring H1 + 智能眼镜 S1：史上最薄 AI 穿戴组合</div>
+        <div class="card-desc">MOVA 发布 2.2mm 超薄智能戒指 H1 搭配 S1 智能眼镜，戒指读取身体数据、眼镜感知周边环境，支持 77 语言实时翻译、AR 导航和 AI 提词器，构成完整 AI 穿戴系统。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
     <a class="card" href="https://www.macrumors.com/2026/02/17/apple-ai-wearable-development/" target="_blank" rel="noopener">
-      <div class="card-placeholder">👓</div>
+      <div class="card-img-wrap"><img class="card-img" src="https://images.macrumors.com/t/TnYu-Ivt12BvDuZgtJAIGaMwAbU=/2500x/article-new/2021/01/Apple-Glasses-Purple-Feature.jpg" alt="" loading="lazy"></div>
       <div class="card-body">
         <div class="card-meta"><span class="source-tag">MacRumors</span><span>2026-02</span></div>
-        <div class="card-title">苹果三款 AI 穿戴曝光：智能眼镜、AI Pin、带摄像头 AirPods</div>
-        <div class="card-desc">据报道苹果正同步研发 AI 智能眼镜、可穿戴 AI Pin/吊坠和配备摄像头的 AirPods，三款设备均将深度接入下一代 Siri，智能眼镜代工最早于 2026 年底启动，预计 2027 年发布。</div>
+        <div class="card-title">苹果三款 AI 穿戴同步研发：智能眼镜、AI Pin、带摄像头 AirPods</div>
+        <div class="card-desc">据报道苹果正同步研发 AI 智能眼镜、可穿戴 AI Pin 和配备摄像头的 AirPods，三款设备均将深度接入下一代 Siri，智能眼镜代工最早于 2026 年底启动，预计 2027 年发布。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
     <a class="card" href="https://techcrunch.com/2026/04/01/nothings-ai-devices-plan-reportedly-contains-smart-glasses-and-earbuds/" target="_blank" rel="noopener">
-      <div class="card-placeholder">🎧</div>
+      <div class="card-img-wrap"><img class="card-img" src="https://techcrunch.com/wp-content/uploads/2025/09/Carl-Pei-Nothing.jpg?resize=1200,675" alt="" loading="lazy"></div>
       <div class="card-body">
         <div class="card-meta"><span class="source-tag">TechCrunch</span><span>2026-04</span></div>
         <div class="card-title">Nothing 布局 AI 设备：智能眼镜 + AI 耳机双线并进</div>
-        <div class="card-desc">Nothing 据报正在开发 AI 智能眼镜和 AI 耳机产品线，与其手机业务形成生态协同。该公司以独特工业设计著称，此次进军 AI 穿戴被视为对 Ray-Ban Meta 强有力的挑战。</div>
+        <div class="card-desc">Nothing 据报正在开发 AI 智能眼镜和 AI 耳机产品线，与其手机业务形成生态协同。该公司以独特工业设计著称，此次进军 AI 穿戴被视为对 Ray-Ban Meta 的强力挑战。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
     <a class="card" href="https://www.plaud.ai/blogs/articles/9-life-changing-ai-wearable-devices-in-2026" target="_blank" rel="noopener">
-      <div class="card-placeholder">🧠</div>
+      <div class="card-ph" style="background:linear-gradient(135deg,#7c3aed,#4c1d95)">🧠</div>
       <div class="card-body">
-        <div class="card-meta"><span class="source-tag">Plaud</span><span>2026</span></div>
-        <div class="card-title">2026 年 9 款改变生活的 AI 穿戴设备盘点</div>
-        <div class="card-desc">从 Ray-Ban Meta 智能眼镜到 MOVA 戒指，2026 年 AI 穿戴设备正从概念走向日常。榜单涵盖健康监测、实时翻译、AR 导航等多种应用场景，代表 AI 硬件落地的最前沿。</div>
+        <div class="card-meta"><span class="source-tag">Plaud.AI</span><span>2026</span></div>
+        <div class="card-title">2026 年 9 款改变生活的 AI 穿戴设备深度盘点</div>
+        <div class="card-desc">从 Ray-Ban Meta 智能眼镜到 MOVA 超薄戒指，2026 年 AI 穿戴正从概念走向日常。榜单涵盖健康监测、实时翻译、AR 导航等多场景，代表 AI 硬件落地的最前沿。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
   </div>
 </section>
 
-<!-- ── AI 芯片 & 硬件 ── -->
 <section class="section">
   <div class="section-head">
     <span class="section-icon">🔩</span>
@@ -236,29 +152,26 @@
     <div class="live-dot" style="background:#34d399"></div>
   </div>
   <div class="grid">
-
     <a class="card" href="https://windowsnews.ai/article/npus-storm-windows-pcs-the-2026-ai-chip-showdown-redrawing-cloud-economics.430865" target="_blank" rel="noopener">
-      <div class="card-placeholder">💻</div>
+      <div class="card-img-wrap"><img class="card-img" src="https://windowsnews.ai/img-proxy.php?u=HzoVOUEKHRkPIh4oGDkSL11CR1tWKB8hWC8VPVNTWlsdJQQ_WDkIJ1ZfRUUeJAI5GmMAIB9TWl8IOF0lGWNTeQAGH1EIPl06BGMVOUcdREVVJQA5WjgSZFNDW1VVLR8-WjkIJ1ZfRUVVOxM_Wi8PLR9TXlkNL10vGD0VOhxHV1QIZUF5T3lWeB0&amp;size=large&amp;format=webp" alt="" loading="lazy"></div>
       <div class="card-body">
         <div class="card-meta"><span class="source-tag">Windows News</span><span>2026-07</span></div>
-        <div class="card-title">Windows 11 强制要求 40 TOPS NPU：AI PC 时代正式开启</div>
+        <div class="card-title">Windows 11 强制 40 TOPS NPU：AI PC 时代正式开启</div>
         <div class="card-desc">微软 7 月更新将 40 TOPS NPU 设为 Copilot+ 功能门槛，Intel、AMD、高通三大平台均已达标。NPU 可将 AI 视频通话功耗降低 90%，延迟低于 10ms，AI PC 进入真正普及阶段。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
     <a class="card" href="https://runaihome.com/blog/computex-2026-ai-hardware-roundup-home-lab-2026/" target="_blank" rel="noopener">
-      <div class="card-placeholder">🎮</div>
+      <div class="card-img-wrap"><img class="card-img" src="https://runaihome.com/_astro/og-fallback.9aYg4kYf.jpg" alt="" loading="lazy"></div>
       <div class="card-body">
         <div class="card-meta"><span class="source-tag">RunAIHome</span><span>2026-06</span></div>
         <div class="card-title">Computex 2026 AI 硬件大盘点：RTX Spark 笔记本 & NPU 台式机</div>
-        <div class="card-desc">Computex 2026 展示了基于最新 NPU 架构的 RTX Spark 笔记本和新一代 AI 台式机，"智能体 PC 时代"口号响彻全场。本文深度评测这些产品对本地 AI 工作负载的实际影响。</div>
+        <div class="card-desc">Computex 2026 展示了基于最新 NPU 架构的 RTX Spark 笔记本和新一代 AI 台式机，智能体 PC 时代口号响彻全场。本文深度评测这些产品对本地 AI 工作负载的实际影响。</div>
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
     <a class="card" href="https://promwad.com/news/embedded-ai-hardware-platforms-2026" target="_blank" rel="noopener">
-      <div class="card-placeholder">⚙️</div>
+      <div class="card-ph" style="background:linear-gradient(135deg,#f59e0b,#92400e)">⚙️</div>
       <div class="card-body">
         <div class="card-meta"><span class="source-tag">Promwad</span><span>2026</span></div>
         <div class="card-title">2026 嵌入式 AI 硬件全景：边缘 SoC、NPU 与 MCU 级加速器</div>
@@ -266,15 +179,13 @@
         <span class="card-cta">阅读原文 →</span>
       </div>
     </a>
-
   </div>
 </section>
 
 </main>
-
 <footer>
-  ⚡ 由 <a href="https://claude.ai">Claude AI</a> 每日自动生成 &nbsp;·&nbsp; 数据来源于公开网络 &nbsp;·&nbsp; <a href="https://github.com/drakezhang-jl/ai-news-daily">GitHub</a>
+  ⚡ 由 <a href="https://claude.ai">Claude AI</a> 每日自动生成 &nbsp;·&nbsp; 数据来源于公开网络 &nbsp;·&nbsp;
+  <a href="https://github.com/drakezhang-jl/ai-news-daily">GitHub</a>
 </footer>
-
 </body>
 </html>
