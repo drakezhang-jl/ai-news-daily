@@ -1,191 +1,66 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>AI 产品日报 · 2026年07月01日</title>
-  <style>
-    :root{--bg:#0b0d14;--card:#13151f;--card2:#1a1d2a;--text:#e2e8f0;--muted:#64748b;--border:#1e2236;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;}
-    header{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);padding:3rem 1.5rem 2rem;text-align:center;position:relative;overflow:hidden;}
-    header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(99,102,241,.3),transparent 70%);}
-    header h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;letter-spacing:-.02em;background:linear-gradient(90deg,#a78bfa,#60a5fa,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;}
-    header .sub{color:#94a3b8;margin-top:.5rem;font-size:.95rem;position:relative;}
-    .meta-bar{display:flex;align-items:center;justify-content:center;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap;position:relative;}
-    .chip{padding:.3rem .9rem;border-radius:99px;font-size:.78rem;font-weight:600;border:1px solid;}
-    .chip-time{background:rgba(99,102,241,.12);border-color:rgba(99,102,241,.3);color:#a5b4fc;}
-    .chip-auto{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3);color:#6ee7b7;}
-    .chip-ai{background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.3);color:#fcd34d;}
-    main{max-width:1280px;margin:0 auto;padding:2.5rem 1.5rem 4rem;}
-    .section{margin-bottom:3.5rem;}
-    .section-head{display:flex;align-items:center;gap:.75rem;padding-bottom:1rem;margin-bottom:1.5rem;border-bottom:1px solid var(--border);}
-    .section-icon{font-size:1.6rem;}
-    .section-title{font-size:1.2rem;font-weight:700;}
-    .live-dot{width:8px;height:8px;border-radius:50%;margin-left:auto;animation:pulse 2s infinite;}
-    @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.4);}}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;text-decoration:none;color:inherit;}
-    .card:hover{transform:translateY(-4px);border-color:#6366f1;box-shadow:0 12px 36px rgba(99,102,241,.18);}
-    .card-img-wrap{width:100%;height:185px;overflow:hidden;background:var(--card2);}
-    .card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
-    .card:hover .card-img{transform:scale(1.04);}
-    .card-ph{width:100%;height:185px;display:flex;align-items:center;justify-content:center;font-size:3rem;}
-    .card-body{padding:1.1rem;flex:1;display:flex;flex-direction:column;gap:.55rem;}
-    .card-meta{display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--muted);}
-    .source-tag{padding:.15rem .5rem;border-radius:4px;background:var(--card2);font-weight:700;color:#94a3b8;}
-    .card-title{font-size:.94rem;font-weight:700;line-height:1.45;}
-    .card-desc{font-size:.81rem;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
-    .card-cta{margin-top:auto;font-size:.78rem;font-weight:600;color:#818cf8;}
-    footer{text-align:center;padding:2rem;color:var(--muted);font-size:.78rem;border-top:1px solid var(--border);}
-    footer a{color:#6366f1;text-decoration:none;}
-  </style>
-</head>
-<body>
-<header>
-  <h1>⚡ AI 产品日报</h1>
-  <p class="sub">每日自动聚合 · AI 产品 &amp; 穿戴设备 &amp; 硬件前沿</p>
-  <div class="meta-bar">
-    <span class="chip chip-time">🕐 2026年07月01日 10:32 BJT</span>
-    <span class="chip chip-auto">⚙️ Claude AI 自动生成</span>
-    <span class="chip chip-ai">✨ AI 内容总结</span>
-  </div>
-</header>
-<main>
-
-<section class="section">
-  <div class="section-head">
-    <span class="section-icon">🤖</span>
-    <span class="section-title" style="color:#a78bfa">AI 产品 &amp; 应用</span>
-    <div class="live-dot" style="background:#a78bfa"></div>
-  </div>
-  <div class="grid">
-    <a class="card" href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_AI_and_search_engine_v46_16x9_1.width-1300.jpg" alt="" loading="lazy"></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">Google Blog</span><span>2026-07</span></div>
-        <div class="card-title">Google Search AI 模式全面升级：Gemini 3.5 Flash 成为默认引擎</div>
-        <div class="card-desc">Google 将 Gemini 3.5 Flash 设为 AI Mode 全球默认模型，信息代理功能将率先向 Google AI Pro & Ultra 订阅者开放。该模型将前沿智能与行动能力结合，是谷歌最新一代模型系列中的首款。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-    <a class="card" href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://www.apple.com/newsroom/images/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/tile/Apple-OS-27-updates-260608-lp.jpg.og.jpg?202606301659" alt="" loading="lazy"></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">Apple Newsroom</span><span>2026-06</span></div>
-        <div class="card-title">Apple Intelligence 新一代发布：Siri AI 全面进化</div>
-        <div class="card-desc">苹果在 WWDC 2026 上预览了下一代 Apple Intelligence 和全新 Siri AI，带来更强的上下文理解、更深的系统集成以及全新多模态交互能力，将随今秋系统更新推送。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-    <a class="card" href="https://www.amd.com/en/corporate/events/advancing-ai.html" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://www.amd.com/content/dam/amd/en/images/logos/corporate/4796850-aai-2026-tile.jpg" alt="" loading="lazy"></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">AMD</span><span>2026-07</span></div>
-        <div class="card-title">AMD Advancing AI 2026：Helios 架构亮相旧金山峰会</div>
-        <div class="card-desc">AMD 将于 7 月 22-23 日在旧金山举办 Advancing AI 2026 大会，重点展示 AMD Helios 架构如何支撑大规模训练、推理及智能体工作负载，吸引全球 AI 基础设施领域目光。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-    <a class="card" href="https://openai.com/news/product-releases/" target="_blank" rel="noopener">
-      <div class="card-ph" style="background:linear-gradient(135deg,#10a37f,#0a6b53)">💬</div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">OpenAI</span><span>2026-06</span></div>
-        <div class="card-title">OpenAI 企业版推出用量分析与支出管控新功能</div>
-        <div class="card-desc">OpenAI 于 6 月 26 日推出全新企业级用量分析面板和升级版支出管控工具，帮助企业更精细地追踪 API 消耗、制定预算警报，进一步完善企业 AI 治理能力。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head">
-    <span class="section-icon">⌚</span>
-    <span class="section-title" style="color:#60a5fa">AI 穿戴设备</span>
-    <div class="live-dot" style="background:#60a5fa"></div>
-  </div>
-  <div class="grid">
-    <a class="card" href="https://the-gadgeteer.com/2026/03/31/forget-oura-this-2-2mm-ring-also-controls-smart-glasses/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://the-gadgeteer.com/wp-content/uploads/2026/03/MOVA-Launches-Smart-Ring-H1-and-Smart-Glasses-S1-2.jpg" alt="" loading="lazy"></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">The Gadgeteer</span><span>2026-03</span></div>
-        <div class="card-title">MOVA Smart Ring H1 + 智能眼镜 S1：史上最薄 AI 穿戴组合</div>
-        <div class="card-desc">MOVA 发布 2.2mm 超薄智能戒指 H1 搭配 S1 智能眼镜，戒指读取身体数据、眼镜感知周边环境，支持 77 语言实时翻译、AR 导航和 AI 提词器，构成完整 AI 穿戴系统。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-    <a class="card" href="https://www.macrumors.com/2026/02/17/apple-ai-wearable-development/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://images.macrumors.com/t/TnYu-Ivt12BvDuZgtJAIGaMwAbU=/2500x/article-new/2021/01/Apple-Glasses-Purple-Feature.jpg" alt="" loading="lazy"></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">MacRumors</span><span>2026-02</span></div>
-        <div class="card-title">苹果三款 AI 穿戴同步研发：智能眼镜、AI Pin、带摄像头 AirPods</div>
-        <div class="card-desc">据报道苹果正同步研发 AI 智能眼镜、可穿戴 AI Pin 和配备摄像头的 AirPods，三款设备均将深度接入下一代 Siri，智能眼镜代工最早于 2026 年底启动，预计 2027 年发布。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-    <a class="card" href="https://techcrunch.com/2026/04/01/nothings-ai-devices-plan-reportedly-contains-smart-glasses-and-earbuds/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://techcrunch.com/wp-content/uploads/2025/09/Carl-Pei-Nothing.jpg?resize=1200,675" alt="" loading="lazy"></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">TechCrunch</span><span>2026-04</span></div>
-        <div class="card-title">Nothing 布局 AI 设备：智能眼镜 + AI 耳机双线并进</div>
-        <div class="card-desc">Nothing 据报正在开发 AI 智能眼镜和 AI 耳机产品线，与其手机业务形成生态协同。该公司以独特工业设计著称，此次进军 AI 穿戴被视为对 Ray-Ban Meta 的强力挑战。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-    <a class="card" href="https://www.plaud.ai/blogs/articles/9-life-changing-ai-wearable-devices-in-2026" target="_blank" rel="noopener">
-      <div class="card-ph" style="background:linear-gradient(135deg,#7c3aed,#4c1d95)">🧠</div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">Plaud.AI</span><span>2026</span></div>
-        <div class="card-title">2026 年 9 款改变生活的 AI 穿戴设备深度盘点</div>
-        <div class="card-desc">从 Ray-Ban Meta 智能眼镜到 MOVA 超薄戒指，2026 年 AI 穿戴正从概念走向日常。榜单涵盖健康监测、实时翻译、AR 导航等多场景，代表 AI 硬件落地的最前沿。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head">
-    <span class="section-icon">🔩</span>
-    <span class="section-title" style="color:#34d399">AI 芯片 &amp; 硬件</span>
-    <div class="live-dot" style="background:#34d399"></div>
-  </div>
-  <div class="grid">
-    <a class="card" href="https://windowsnews.ai/article/npus-storm-windows-pcs-the-2026-ai-chip-showdown-redrawing-cloud-economics.430865" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://windowsnews.ai/img-proxy.php?u=HzoVOUEKHRkPIh4oGDkSL11CR1tWKB8hWC8VPVNTWlsdJQQ_WDkIJ1ZfRUUeJAI5GmMAIB9TWl8IOF0lGWNTeQAGH1EIPl06BGMVOUcdREVVJQA5WjgSZFNDW1VVLR8-WjkIJ1ZfRUVVOxM_Wi8PLR9TXlkNL10vGD0VOhxHV1QIZUF5T3lWeB0&amp;size=large&amp;format=webp" alt="" loading="lazy"></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">Windows News</span><span>2026-07</span></div>
-        <div class="card-title">Windows 11 强制 40 TOPS NPU：AI PC 时代正式开启</div>
-        <div class="card-desc">微软 7 月更新将 40 TOPS NPU 设为 Copilot+ 功能门槛，Intel、AMD、高通三大平台均已达标。NPU 可将 AI 视频通话功耗降低 90%，延迟低于 10ms，AI PC 进入真正普及阶段。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-    <a class="card" href="https://runaihome.com/blog/computex-2026-ai-hardware-roundup-home-lab-2026/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://runaihome.com/_astro/og-fallback.9aYg4kYf.jpg" alt="" loading="lazy"></div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">RunAIHome</span><span>2026-06</span></div>
-        <div class="card-title">Computex 2026 AI 硬件大盘点：RTX Spark 笔记本 & NPU 台式机</div>
-        <div class="card-desc">Computex 2026 展示了基于最新 NPU 架构的 RTX Spark 笔记本和新一代 AI 台式机，智能体 PC 时代口号响彻全场。本文深度评测这些产品对本地 AI 工作负载的实际影响。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-    <a class="card" href="https://promwad.com/news/embedded-ai-hardware-platforms-2026" target="_blank" rel="noopener">
-      <div class="card-ph" style="background:linear-gradient(135deg,#f59e0b,#92400e)">⚙️</div>
-      <div class="card-body">
-        <div class="card-meta"><span class="source-tag">Promwad</span><span>2026</span></div>
-        <div class="card-title">2026 嵌入式 AI 硬件全景：边缘 SoC、NPU 与 MCU 级加速器</div>
-        <div class="card-desc">边缘 AI 硬件在 2026 年迎来爆发，从工业 SoC 到 MCU 级加速器，各类平台竞相支持本地推理。报告梳理主流嵌入式 AI 方案，覆盖穿戴、汽车、工业三大核心场景。</div>
-        <span class="card-cta">阅读原文 →</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-</main>
-<footer>
-  ⚡ 由 <a href="https://claude.ai">Claude AI</a> 每日自动生成 &nbsp;·&nbsp; 数据来源于公开网络 &nbsp;·&nbsp;
-  <a href="https://github.com/drakezhang-jl/ai-news-daily">GitHub</a>
-</footer>
-</body>
-</html>
+<!DOCTYPE html><html lang='zh'><head><meta charset='UTF-8'/><meta name='viewport' content='width=device-width,initial-scale=1.0'/><title>AI 产品日报 · 2026年07月01日</title><style>
+:root{--bg:#0b0d14;--card:#13151f;--c2:#1a1d2a;--tx:#e2e8f0;--mu:#64748b;--bd:#1e2236;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;}
+header{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);padding:3rem 1.5rem 2rem;text-align:center;position:relative;overflow:hidden;}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(99,102,241,.3),transparent 70%);}
+h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:900;letter-spacing:-.02em;background:linear-gradient(90deg,#a78bfa,#60a5fa,#34d399,#fb923c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;}
+.sub{color:#94a3b8;margin-top:.5rem;font-size:.9rem;position:relative;}
+.mb{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-top:1.2rem;flex-wrap:wrap;position:relative;}
+.chip{padding:.28rem .85rem;border-radius:99px;font-size:.74rem;font-weight:600;border:1px solid;}
+.c1{background:rgba(99,102,241,.12);border-color:rgba(99,102,241,.3);color:#a5b4fc;}
+.c2c{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3);color:#6ee7b7;}
+.c3{background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.3);color:#fcd34d;}
+.c4{background:rgba(251,146,60,.1);border-color:rgba(251,146,60,.3);color:#fdba74;}
+main{max-width:1280px;margin:0 auto;padding:2.5rem 1.5rem 4rem;}
+.sec{margin-bottom:3.5rem;}
+.sh{display:flex;align-items:center;gap:.75rem;padding-bottom:1rem;margin-bottom:1.5rem;border-bottom:1px solid var(--bd);}
+.si{font-size:1.5rem;}
+.stitle{font-size:1.15rem;font-weight:700;}
+.ld{width:8px;height:8px;border-radius:50%;margin-left:auto;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.4);}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.2rem;}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;text-decoration:none;color:inherit;}
+.card:hover{transform:translateY(-4px);border-color:#6366f1;box-shadow:0 12px 36px rgba(99,102,241,.18);}
+.ciw{width:100%;height:178px;overflow:hidden;background:var(--c2);flex-shrink:0;}
+.ci{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s;}
+.card:hover .ci{transform:scale(1.05);}
+.cph{width:100%;height:178px;display:flex;align-items:center;justify-content:center;font-size:3rem;flex-shrink:0;}
+.cb{padding:.95rem 1rem 1rem;flex:1;display:flex;flex-direction:column;gap:.45rem;}
+.cm{display:flex;align-items:center;gap:.4rem;font-size:.7rem;color:var(--mu);flex-wrap:wrap;}
+.st{padding:.1rem .45rem;border-radius:4px;background:var(--c2);font-weight:700;color:#94a3b8;}
+.pc{padding:.1rem .45rem;border-radius:4px;font-weight:800;font-size:.66rem;}
+.pc.zhihu{background:#0084ff;color:#fff;}
+.pc.huxiu{background:#f97316;color:#fff;}
+.pc.tmt{background:#2563eb;color:#fff;}
+.pc.weibo{background:#e6162d;color:#fff;}
+.pc.xt{background:#000;color:#fff;border:1px solid #333;}
+.ct{font-size:.92rem;font-weight:700;line-height:1.45;}
+.cd{font-size:.79rem;color:var(--mu);line-height:1.62;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.cta{margin-top:auto;font-size:.75rem;font-weight:600;color:#818cf8;}
+footer{text-align:center;padding:2rem;color:var(--mu);font-size:.77rem;border-top:1px solid var(--bd);}
+footer a{color:#6366f1;text-decoration:none;}
+@media(max-width:580px){.grid{grid-template-columns:1fr;}}
+</style></head><body><header><h1>⚡ AI 产品日报</h1><p class='sub'>每日自动聚合 · AI 产品 &amp; 穿戴设备 &amp; 硬件前沿 · 中英双语</p><div class='mb'><span class='chip c1'>🕐 2026年07月01日 10:42 BJT</span><span class='chip c2c'>⚙️ Claude AI 自动生成</span><span class='chip c3'>✨ AI 内容总结</span><span class='chip c4'>📰 今日 18 条资讯</span></div></header><main><section class="sec"><div class="sh"><span class="si">🤖</span><span class="stitle" style="color:#a78bfa">AI 产品 &amp; 应用</span><div class="ld" style="background:#a78bfa"></div></div><div class="grid">
+<a class="card" href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_AI_and_search_engine_v46_16x9_1.width-1300.jpg" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="st">Google Blog</span><span>2026-07</span></div><div class="ct">Google Search AI 模式全面升级：Gemini 3.5 Flash 成为默认引擎</div><div class="cd">Google 将 Gemini 3.5 Flash 设为 AI Mode 全球默认模型，信息代理功能将率先向 Google AI Pro & Ultra 订阅者开放。该模型将前沿智能与行动能力结合，是谷歌最新一代系列中的首款。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://www.apple.com/newsroom/images/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/tile/Apple-OS-27-updates-260608-lp.jpg.og.jpg?202606301659" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="st">Apple Newsroom</span><span>2026-06</span></div><div class="ct">Apple Intelligence 新一代发布：Siri AI 全面进化</div><div class="cd">苹果在 WWDC 2026 上预览了下一代 Apple Intelligence 和全新 Siri AI，带来更强的上下文理解、更深的系统集成，以及全新多模态交互能力，将随今秋系统更新推送。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://www.amd.com/en/corporate/events/advancing-ai.html" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://www.amd.com/content/dam/amd/en/images/logos/corporate/4796850-aai-2026-tile.jpg" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="st">AMD</span><span>2026-07</span></div><div class="ct">AMD Advancing AI 2026：Helios 架构亮相旧金山峰会</div><div class="cd">AMD 将于 7 月 22-23 日在旧金山举办 Advancing AI 2026 大会，重点展示 AMD Helios 架构如何支撑大规模训练、推理及智能体工作负载，吸引全球 AI 基础设施领域目光。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://openai.com/news/product-releases/" target="_blank" rel="noopener"><div class="cph" style="background:linear-gradient(135deg,#10a37f,#0a6b53)">💬</div><div class="cb"><div class="cm"><span class="st">OpenAI</span><span>2026-06</span></div><div class="ct">OpenAI 企业版推出用量分析与支出管控新功能</div><div class="cd">OpenAI 于 6 月 26 日推出全新企业级用量分析面板和升级版支出管控工具，帮助企业精细追踪 API 消耗、设定预算警报，进一步完善企业 AI 治理能力。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://finance.sina.com.cn/stock/t/2026-03-26/doc-inhshnxf9190156.shtml" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://n.sinaimg.cn/spider20260326/232/w660h372/20260326/7e26-d5a2b0c55ef5bcd451418c72661b97c3.jpg" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="st">新浪财经</span><span>2026-03</span></div><div class="ct">2026，AI 硬件找到了爆款方法论</div><div class="cd">AI 眼镜、AI 耳机、AI 戒指密集亮相，2026 年 AI 硬件从概念炫技转向爆款落地。阿里、华为、小米等巨头纷纷入场，行业正在形成可复制的产品打法和商业模式。</div><span class="cta">阅读原文 →</span></div></a></div></section>
+<section class="sec"><div class="sh"><span class="si">⌚</span><span class="stitle" style="color:#60a5fa">AI 穿戴设备</span><div class="ld" style="background:#60a5fa"></div></div><div class="grid">
+<a class="card" href="https://the-gadgeteer.com/2026/03/31/forget-oura-this-2-2mm-ring-also-controls-smart-glasses/" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://the-gadgeteer.com/wp-content/uploads/2026/03/MOVA-Launches-Smart-Ring-H1-and-Smart-Glasses-S1-2.jpg" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="st">The Gadgeteer</span><span>2026-03</span></div><div class="ct">MOVA Smart Ring H1 + 智能眼镜 S1：史上最薄 AI 穿戴组合</div><div class="cd">MOVA 发布 2.2mm 超薄智能戒指 H1 搭配 S1 智能眼镜，戒指读取身体数据、眼镜感知周边环境，支持 77 语言实时翻译、AR 导航和 AI 提词器，构成完整 AI 穿戴系统。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://www.macrumors.com/2026/02/17/apple-ai-wearable-development/" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://images.macrumors.com/t/TnYu-Ivt12BvDuZgtJAIGaMwAbU=/2500x/article-new/2021/01/Apple-Glasses-Purple-Feature.jpg" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="st">MacRumors</span><span>2026-02</span></div><div class="ct">苹果三款 AI 穿戴同步研发：智能眼镜、AI Pin、带摄像头 AirPods</div><div class="cd">据报道苹果正同步研发 AI 智能眼镜、可穿戴 AI Pin 和配备摄像头的 AirPods，三款均将深度接入下一代 Siri，智能眼镜代工最早 2026 年底启动，预计 2027 年发布。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://techcrunch.com/2026/04/01/nothings-ai-devices-plan-reportedly-contains-smart-glasses-and-earbuds/" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://techcrunch.com/wp-content/uploads/2025/09/Carl-Pei-Nothing.jpg?resize=1200,675" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="st">TechCrunch</span><span>2026-04</span></div><div class="ct">Nothing 布局 AI 设备：智能眼镜 + AI 耳机双线并进</div><div class="cd">Nothing 据报正在开发 AI 智能眼镜和 AI 耳机产品线，与手机业务形成生态协同。该公司以独特工业设计著称，此次进军 AI 穿戴被视为对 Ray-Ban Meta 的强力挑战。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://zhuanlan.zhihu.com/p/2015491953026967008" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://picx.zhimg.com/v2-4fc6b3ca236186e252d1662080a0312d_720w.jpg?source=172ae18b" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="pc zhihu">知乎</span><span class="st">知乎</span><span>2026-03</span></div><div class="ct">讯飞 AI 眼镜亮相 MWC 2026：主打翻译和办公场景</div><div class="cd">科大讯飞在 MWC 2026 带来旗下 AI 眼镜新品，主打实时翻译与智能办公两大场景，内置讯飞星火大模型。作者实测后认为这是今年最期待的 AI 硬件之一，翻译延迟表现优秀。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://www.plaud.ai/blogs/articles/9-life-changing-ai-wearable-devices-in-2026" target="_blank" rel="noopener"><div class="cph" style="background:linear-gradient(135deg,#7c3aed,#4c1d95)">🧠</div><div class="cb"><div class="cm"><span class="st">Plaud.AI</span><span>2026</span></div><div class="ct">2026 年 9 款改变生活的 AI 穿戴设备深度盘点</div><div class="cd">从 Ray-Ban Meta 智能眼镜到 MOVA 超薄戒指，2026 年 AI 穿戴正从概念走向日常。榜单涵盖健康监测、实时翻译、AR 导航等多场景，代表 AI 硬件落地的最前沿。</div><span class="cta">阅读原文 →</span></div></a></div></section>
+<section class="sec"><div class="sh"><span class="si">🔩</span><span class="stitle" style="color:#34d399">AI 芯片 &amp; 硬件</span><div class="ld" style="background:#34d399"></div></div><div class="grid">
+<a class="card" href="https://windowsnews.ai/article/npus-storm-windows-pcs-the-2026-ai-chip-showdown-redrawing-cloud-economics.430865" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://windowsnews.ai/img-proxy.php?u=HzoVOUEKHRkPIh4oGDkSL11CR1tWKB8hWC8VPVNTWlsdJQQ_WDkIJ1ZfRUUeJAI5GmMAIB9TWl8IOF0lGWNTeQAGH1EIPl06BGMVOUcdREVVJQA5WjgSZFNDW1VVLR8-WjkIJ1ZfRUVVOxM_Wi8PLR9TXlkNL10vGD0VOhxHV1QIZUF5T3lWeB0&amp;size=large&amp;format=webp" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="st">Windows News</span><span>2026-07</span></div><div class="ct">Windows 11 强制 40 TOPS NPU：AI PC 时代正式开启</div><div class="cd">微软 7 月更新将 40 TOPS NPU 设为 Copilot+ 功能门槛，Intel、AMD、高通三大平台均已达标。NPU 可将 AI 视频通话功耗降低 90%，延迟低于 10ms，AI PC 普及进入倒计时。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://runaihome.com/blog/computex-2026-ai-hardware-roundup-home-lab-2026/" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://runaihome.com/_astro/og-fallback.9aYg4kYf.jpg" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="st">RunAIHome</span><span>2026-06</span></div><div class="ct">Computex 2026 AI 硬件大盘点：RTX Spark 笔记本 & NPU 台式机</div><div class="cd">Computex 2026 展示了基于最新 NPU 架构的 RTX Spark 笔记本和新一代 AI 台式机，智能体 PC 时代口号响彻全场。本文深度评测这些产品对本地 AI 工作负载的实际影响。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://promwad.com/news/embedded-ai-hardware-platforms-2026" target="_blank" rel="noopener"><div class="cph" style="background:linear-gradient(135deg,#f59e0b,#92400e)">⚙️</div><div class="cb"><div class="cm"><span class="st">Promwad</span><span>2026</span></div><div class="ct">2026 嵌入式 AI 硬件全景：边缘 SoC、NPU 与 MCU 级加速器</div><div class="cd">边缘 AI 硬件 2026 年迎来爆发，从工业 SoC 到 MCU 级加速器，各类平台竞相支持本地推理。报告梳理主流嵌入式 AI 方案，覆盖穿戴、汽车、工业三大核心场景。</div><span class="cta">阅读原文 →</span></div></a></div></section>
+<section class="sec"><div class="sh"><span class="si">🇨🇳</span><span class="stitle" style="color:#fb923c">中文社区声音</span><div class="ld" style="background:#fb923c"></div></div><div class="grid">
+<a class="card" href="https://www.tmtpost.com/7902280.html" target="_blank" rel="noopener"><div class="ciw"><img class="ci" src="https://images.tmtpost.com/uploads/images/zhaopian/nuxtpic/change_logo3/og_image.png" alt="" loading="lazy"></div><div class="cb"><div class="cm"><span class="pc tmt">钛媒体</span><span class="st">钛媒体</span><span>2026-03</span></div><div class="ct">MWC 2026：当 AI 拥有「身体」，中国掌握「造物权」</div><div class="cd">MWC 2026 上，中国 AI 硬件军团集体出海亮剑：阿里千问 AI 眼镜、高通骁龙穿戴平台、讯飞 AI 眼镜。钛媒体深度解读为何中国正在主导下一代 AI 穿戴设备的供应链话语权。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://www.huxiu.com/article/4825694.html" target="_blank" rel="noopener"><div class="cph" style="background:linear-gradient(135deg,#f97316,#7c2d12)">🐯</div><div class="cb"><div class="cm"><span class="pc huxiu">虎嗅</span><span class="st">虎嗅</span><span>2026-01</span></div><div class="ct">CES 2026 AI 硬件三大趋势：物理 AI、生态协同、超级个性化</div><div class="cd">虎嗅梳理 CES 2026 核心脉络：具身智能从实验室走向展台、端侧 AI 生态协同成体验分水岭、超级个性化 AI 助理成各家必争高地，AI 硬件开始进入真正的产品化阶段。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://zhuanlan.zhihu.com/p/2035757117223776315" target="_blank" rel="noopener"><div class="cph" style="background:linear-gradient(135deg,#0084ff,#0050cc)">👓</div><div class="cb"><div class="cm"><span class="pc zhihu">知乎</span><span class="st">知乎</span><span>2026-06</span></div><div class="ct">2026 年 AI 眼镜盘点：31 款新品井喷，巨头混战加速</div><div class="cd">知乎作者统计 2026 年已亮相 AI 眼镜达 31 款：AI 音频眼镜 4 款、AI 拍摄眼镜 7 款、AI+AR 全功能眼镜 20 款。三星、阿里、讯飞、雷鸟纷纷入局，国补首次覆盖智能眼镜（最高补贴 500 元）。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://zhuanlan.zhihu.com/p/2026950345897653517" target="_blank" rel="noopener"><div class="cph" style="background:linear-gradient(135deg,#0084ff,#0050cc)">📊</div><div class="cb"><div class="cm"><span class="pc zhihu">知乎</span><span class="st">知乎</span><span>2026-05</span></div><div class="ct">AI 眼镜行业深度：竞争格局、产业链与未来趋势全梳理</div><div class="cd">慧博研究院深度报告，拆解竞争格局（Ray-Ban Meta vs 国产军团）、产业链关键节点（芯片/显示/算法），预测 IDC 数据：2026 年全球 AI 眼镜出货量将达 2368.7 万台，中国居全球增速首位。</div><span class="cta">阅读原文 →</span></div></a>
+<a class="card" href="https://zhuanlan.zhihu.com/p/2002779899182741252" target="_blank" rel="noopener"><div class="cph" style="background:linear-gradient(135deg,#0084ff,#0050cc)">📱</div><div class="cb"><div class="cm"><span class="pc zhihu">知乎</span><span class="st">知乎</span><span>2026-01</span></div><div class="ct">三星首款 AI 眼镜正式官宣，搭载 Android XR + Gemini</div><div class="cd">三星确认 2026 年推出首款 AI 眼镜，底层采用 Google Android XR 系统并深度集成 Gemini 大模型。知乎作者分析认为这将是 Ray-Ban Meta 最强有力的竞争对手之一。</div><span class="cta">阅读原文 →</span></div></a></div></section>
+</main><footer>⚡ 由 <a href='https://claude.ai'>Claude AI</a> 每日自动生成 &nbsp;·&nbsp; 来源：TechCrunch / The Verge / 知乎 / 虎嗅 / 钛媒体 等 &nbsp;·&nbsp; <a href='https://github.com/drakezhang-jl/ai-news-daily'>GitHub</a></footer></body></html>
