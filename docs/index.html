@@ -20,6 +20,10 @@ h2{font-size:1.5rem;margin:48px 0 20px;padding-bottom:10px;border-bottom:1px sol
 .card a{color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%;}
 .card-ph{height:185px;display:flex;align-items:center;justify-content:center;font-size:64px;transition:transform .3s ease;}
 .card:hover .card-ph{transform:scale(1.04);}
+.card-img-wrap{height:185px;overflow:hidden;position:relative;background:#0e1019;}
+.card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease;}
+.card:hover .card-img{transform:scale(1.04);}
+.card-img-wrap .card-ph{display:none;position:absolute;inset:0;}
 .card-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column;}
 .card-title{font-size:1.05rem;font-weight:700;margin-bottom:10px;line-height:1.4;}
 .card-sum{font-size:.88rem;color:var(--muted);flex:1;}
@@ -50,7 +54,7 @@ footer{text-align:center;margin-top:64px;color:#4d5268;font-size:.85rem;}
 <h2>🤖 AI 产品 &amp; 应用</h2>
 <div class="grid">
 <div class="card"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" target="_blank">
-<div class="card-ph g1">🤖</div>
+<div class="card-img-wrap"><img class="card-img" src="https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/202d549e-e37e-4a51-8a27-4a1a793b581e.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g1">🤖</div></div>
 <div class="card-body"><div class="card-title">Anthropic 发布 Claude Sonnet 5</div>
 <div class="card-sum">6月30日发布，7月1日起成为所有免费与付费用户的默认模型。号称迄今最具 Agent 能力的 Sonnet，多项任务表现逼近旗舰 Opus 4.8，且8月31日前的推广定价低于上代 Sonnet 4.6，性价比拉满。</div>
 <div class="card-src">英文媒体 · BuildFastWithAI</div></div></a></div>
@@ -62,13 +66,13 @@ footer{text-align:center;margin-top:64px;color:#4d5268;font-size:.85rem;}
 <div class="card-src">英文媒体 · LLM Stats</div></div></a></div>
 
 <div class="card"><a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank">
-<div class="card-ph g3">🍎</div>
+<div class="card-img-wrap"><img class="card-img" src="https://www.apple.com/newsroom/images/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/tile/Apple-OS-27-updates-260608-lp.jpg.og.jpg?202606121953" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g3">🍎</div></div>
 <div class="card-body"><div class="card-title">苹果官宣新一代 Apple Intelligence 与 Siri AI</div>
 <div class="card-sum">苹果6月正式发布新一代 Apple Intelligence，重构后的 Siri 深度整合视觉上下文理解能力，为秋季新品与传闻中的 AI 穿戴设备布局铺路，AI 战略明显提速。</div>
 <div class="card-src">英文媒体 · Apple Newsroom</div></div></a></div>
 
 <div class="card"><a href="https://techcrunch.com/2026/06/18/openai-is-bringing-on-some-big-guns-in-the-lead-up-to-its-ipo/" target="_blank">
-<div class="card-ph g4">📈</div>
+<div class="card-img-wrap"><img class="card-img" src="https://techcrunch.com/wp-content/uploads/2026/06/noam-shazeer-deal-ball.png?resize=1200,800" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g4">📈</div></div>
 <div class="card-body"><div class="card-title">OpenAI IPO 前夕招兵买马：Shazeer 加盟</div>
 <div class="card-sum">TechCrunch 报道：Transformer 论文合著者 Noam Shazeer 从 Google DeepMind 转投 OpenAI；前白宫 AI 政策官员 Dean Ball 7月6日入职，领导新团队 Strategic Futures，为 IPO 与政策博弈储备火力。</div>
 <div class="card-src">英文媒体 · TechCrunch</div></div></a></div>
@@ -83,7 +87,7 @@ footer{text-align:center;margin-top:64px;color:#4d5268;font-size:.85rem;}
 <h2>⌚ AI 穿戴设备</h2>
 <div class="grid">
 <div class="card"><a href="https://www.t3.com/tech/ai/apples-future-ai-products-could-include-smart-glasses-new-airpods-and-wearable-jewellery-that-isnt-a-ring" target="_blank">
-<div class="card-ph g8">🕶️</div>
+<div class="card-img-wrap"><img class="card-img" src="https://cdn.mos.cms.futurecdn.net/SKpNmvDrrgMUPvjDPJuVBg-1920-80.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g8">🕶️</div></div>
 <div class="card-body"><div class="card-title">苹果三款 AI 穿戴曝光：眼镜、摄像头 AirPods、吊坠</div>
 <div class="card-sum">Gurman 爆料：苹果正加速开发智能眼镜、带摄像头的 AirPods，以及可作项链或别在衣服上的 Pendant 吊坠。三款设备均围绕新 Siri 构建，依赖视觉上下文理解来执行操作。</div>
 <div class="card-src">英文媒体 · T3 / Bloomberg</div></div></a></div>
@@ -95,13 +99,13 @@ footer{text-align:center;margin-top:64px;color:#4d5268;font-size:.85rem;}
 <div class="card-src">英文媒体 · HumAI Blog</div></div></a></div>
 
 <div class="card"><a href="https://the-gadgeteer.com/2026/05/08/best-ai-wearables-2026-2/" target="_blank">
-<div class="card-ph g6">📿</div>
+<div class="card-img-wrap"><img class="card-img" src="https://the-gadgeteer.com/wp-content/uploads/2026/05/5-AI-Wearables-to-Watch-in-2026.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g6">📿</div></div>
 <div class="card-body"><div class="card-title">Meta 收编 Limitless：Pendant 老用户白拿会员</div>
 <div class="card-sum">环境 AI 录音吊坠 Limitless Pendant 待机可达100小时，被评为最实用的 ambient AI 产品之一。Meta 于2025年12月完成收购，承诺现有用户至少一年服务不中断，Unlimited 计划直接免费送。</div>
 <div class="card-src">英文媒体 · The Gadgeteer</div></div></a></div>
 
 <div class="card"><a href="https://36kr.com/p/3802071678000901" target="_blank">
-<div class="card-ph g7">🚀</div>
+<div class="card-img-wrap"><img class="card-img" src="https://img.36krcdn.com/hsossms/20260509/v2_cf677e9c533f43a78e93ef256ec66f29@000000@ai_oswg358104oswg1536oswg722_img_000~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g7">🚀</div></div>
 <div class="card-body"><div class="card-title">雷鸟 X3 Pro eSIM 版：AR 眼镜首次脱离手机</div>
 <div class="card-sum">雷鸟创新在 CES 2026 展示 eSIM 版 AI+AR 眼镜 X3 Pro，AR 眼镜首次真正具备独立联网能力。36氪指出2026年 AI 眼镜大战升级：各家一边等苹果出手，一边憋大招。</div>
 <div class="card-src">中文媒体 · 36氪</div></div></a></div>
@@ -116,7 +120,7 @@ footer{text-align:center;margin-top:64px;color:#4d5268;font-size:.85rem;}
 <h2>🔩 AI 芯片 &amp; 硬件</h2>
 <div class="grid">
 <div class="card"><a href="https://windowsnews.ai/article/npus-storm-windows-pcs-the-2026-ai-chip-showdown-redrawing-cloud-economics.430865" target="_blank">
-<div class="card-ph g2">🔩</div>
+<div class="card-img-wrap"><img class="card-img" src="https://windowsnews.ai/img-proxy.php?u=HzoVOUEKHRkPIh4oGDkSL11CR1tWKB8hWC8VPVNTWlsdJQQ_WDkIJ1ZfRUUeJAI5GmMAIB9TWl8IOF0lGWNTeQAGH1EIPl06BGMVOUcdREVVJQA5WjgSZFNDW1VVLR8-WjkIJ1ZfRUVVOxM_Wi8PLR9TXlkNL10vGD0VOhxHV1QIZUF5T3lWeB0&amp;size=large&amp;format=webp" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g2">🔩</div></div>
 <div class="card-body"><div class="card-title">Intel Computex 2026：18A 节点 Xeon 6+ 与 Crescent Island GPU</div>
 <div class="card-sum">Intel 在 Computex 2026 亮出双子弹：基于 18A 制程的 Xeon 6+ 处理器和 Crescent Island 数据中心 GPU，正面挑战 NVIDIA 在 AI 数据中心的统治地位，制程翻身仗进入验证期。</div>
 <div class="card-src">英文媒体 · Windows News</div></div></a></div>
@@ -134,7 +138,7 @@ footer{text-align:center;margin-top:64px;color:#4d5268;font-size:.85rem;}
 <div class="card-src">英文媒体 · Windows Forum</div></div></a></div>
 
 <div class="card"><a href="https://www.newegg.com/insider/ai-pc-news-from-ces-2026-the-npu-race-goes-real-and-oems-build-around-local-ai/" target="_blank">
-<div class="card-ph g4">💻</div>
+<div class="card-img-wrap"><img class="card-img" src="https://www.newegg.com/insider/wp-content/uploads/2026/01/CES-PC.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g4">💻</div></div>
 <div class="card-body"><div class="card-title">NPU 军备竞赛：40+ TOPS 已成 Windows PC 标配</div>
 <div class="card-sum">2026年 NPU 竞赛白热化：骁龙 X Elite Gen 2 达75-85 TOPS，AMD Ryzen AI Max 系列50-75 TOPS，Intel Lunar Lake 平台合计输出150-180+ TOPS。40+ TOPS NPU 已是 Windows AI PC 准入门槛。</div>
 <div class="card-src">英文媒体 · Newegg Insider</div></div></a></div>
