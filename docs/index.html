@@ -3,272 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>⚡ AI 产品日报 · 2026-07-14</title>
+<title>⚡ AI 产品日报 · 2026-07-15</title>
 <style>
-  :root{
-    --bg:#0b0d14; --card:#13151f; --border:#1e2236;
-    --text:#e8eaf2; --muted:#9aa1b8; --accent:#8b5cf6;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.6;}
-  .wrap{max-width:1240px;margin:0 auto;padding:48px 24px 80px;}
-  header{text-align:center;margin-bottom:56px;}
-  h1{font-size:2.6rem;font-weight:800;background:linear-gradient(90deg,#a78bfa 0%,#60a5fa 50%,#34d399 100%);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.5px;}
-  .sub{margin-top:12px;color:var(--muted);font-size:.95rem;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;align-items:center;}
-  .sub .dot{opacity:.4;}
-  .badge{border:1px solid var(--border);border-radius:999px;padding:2px 12px;font-size:.8rem;color:#a78bfa;background:rgba(139,92,246,.08);}
-  section{margin-bottom:56px;}
-  h2{font-size:1.45rem;font-weight:700;margin-bottom:6px;}
-  .sec-desc{color:var(--muted);font-size:.88rem;margin-bottom:22px;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px;}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--text);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;}
-  .card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 8px 32px rgba(139,92,246,.25);}
-  .card-img-wrap{height:185px;overflow:hidden;position:relative;flex-shrink:0;background:#0e1019;}
-  .card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease;}
-  .card:hover .card-img{transform:scale(1.04);}
-  .card-img-wrap .card-ph{display:none;position:absolute;inset:0;}
-  .card-ph{height:185px;display:flex;align-items:center;justify-content:center;font-size:3.4rem;flex-shrink:0;}
-  .g1{background:linear-gradient(135deg,#1e3a8a,#0084ff);}
-  .g2{background:linear-gradient(135deg,#312e81,#7c3aed);}
-  .g3{background:linear-gradient(135deg,#064e3b,#0d9488);}
-  .g4{background:linear-gradient(135deg,#0c4a6e,#0284c7);}
-  .g5{background:linear-gradient(135deg,#7f1d1d,#e6162d);}
-  .card-body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1;}
-  .chips{display:flex;gap:6px;flex-wrap:wrap;}
-  .chip{font-size:.7rem;padding:2px 10px;border-radius:999px;color:#fff;font-weight:600;letter-spacing:.3px;}
-  .chip-src{background:#1e2236;color:#9aa1b8;font-weight:500;}
-  .chip-zhihu{background:#0084ff;}
-  .chip-weibo{background:#e6162d;}
-  .chip-x{background:#000;border:1px solid #333;}
-  .card h3{font-size:1.02rem;font-weight:700;line-height:1.45;}
-  .card p{font-size:.85rem;color:var(--muted);}
-  footer{text-align:center;color:#565d75;font-size:.8rem;margin-top:24px;border-top:1px solid var(--border);padding-top:28px;}
-  @media (max-width:640px){h1{font-size:1.9rem;}.wrap{padding:32px 16px 60px;}}
+:root{--bg:#0b0d14;--card:#13151f;--border:#1e2236;--text:#e8eaf2;--muted:#8b90a8;--accent:#8b5cf6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.6}
+.wrap{max-width:1200px;margin:0 auto;padding:40px 24px 80px}
+header{text-align:center;margin-bottom:48px}
+h1{font-size:2.6rem;font-weight:800;background:linear-gradient(90deg,#a78bfa,#60a5fa,#34d399);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px}
+.sub{color:var(--muted);font-size:.95rem}
+.sub .chip{display:inline-block;background:#1a1d2e;border:1px solid var(--border);border-radius:20px;padding:2px 12px;margin:0 4px;font-size:.8rem}
+section{margin-bottom:56px}
+h2{font-size:1.5rem;margin-bottom:20px;padding-left:12px;border-left:4px solid var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--text);display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);border-color:#8b5cf6;box-shadow:0 8px 30px rgba(139,92,246,.25)}
+.card-img-wrap{height:185px;overflow:hidden;position:relative;flex-shrink:0}
+.card-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.card:hover .card-img{transform:scale(1.04)}
+.card-img-wrap .card-ph{display:none;position:absolute;inset:0}
+.card-ph{height:185px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;flex-shrink:0}
+.g1{background:linear-gradient(135deg,#312e81,#6d28d9)}
+.g2{background:linear-gradient(135deg,#134e4a,#0891b2)}
+.g3{background:linear-gradient(135deg,#7c2d12,#dc2626)}
+.g4{background:linear-gradient(135deg,#1e3a5f,#0084ff)}
+.g5{background:linear-gradient(135deg,#14532d,#65a30d)}
+.g6{background:linear-gradient(135deg,#3b0764,#be185d)}
+.card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-title{font-size:1.05rem;font-weight:700;line-height:1.4}
+.card-desc{font-size:.88rem;color:var(--muted);flex:1}
+.card-meta{display:flex;align-items:center;gap:8px;font-size:.75rem;color:#6b7194;margin-top:4px;flex-wrap:wrap}
+.src{background:#1a1d2e;border-radius:6px;padding:1px 8px}
+.pchip{border-radius:6px;padding:1px 8px;color:#fff;font-weight:600}
+.zhihu{background:#0084ff}.weibo{background:#e6162d}.xchip{background:#000;border:1px solid #333}
+footer{text-align:center;color:#5a5f78;font-size:.8rem;margin-top:40px}
 </style>
 </head>
 <body>
 <div class="wrap">
-
 <header>
-  <h1>⚡ AI 产品日报</h1>
-  <div class="sub">
-    <span>2026年7月14日 · 北京时间</span><span class="dot">|</span>
-    <span class="badge">Claude AI 自动生成</span>
-    <span class="badge">AI 内容总结</span>
-  </div>
+<h1>⚡ AI 产品日报</h1>
+<div class="sub">2026年7月15日 · 星期三（北京时间）<span class="chip">🤖 Claude AI 自动生成</span><span class="chip">✍️ AI 内容总结</span></div>
 </header>
 
-<!-- Section 1 -->
 <section>
-  <h2>🤖 AI 产品 &amp; 应用</h2>
-  <div class="sec-desc">英文科技媒体 · 模型与产品发布</div>
-  <div class="grid">
+<h2>🤖 AI 产品 &amp; 应用</h2>
+<div class="grid">
 
-    <a class="card" href="https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://techcrunch.com/wp-content/uploads/2024/07/microsoft-logo-office-e1735933827774.jpg?resize=1200,799" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g2">🏢</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">TechCrunch</span></div>
-        <h3>微软豪掷25亿美元成立 AI 部署公司 Frontier</h3>
-        <p>微软7月2日宣布成立"Microsoft Frontier Company"，投入25亿美元与6000名行业及工程专家，专注企业级 AI 部署落地，跟进亚马逊、OpenAI 与 Anthropic 的 FDE 模式，已与伦交所集团、联合利华、埃森哲达成早期合作。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.aiapps.com/blog/top-ai-news-july-breakthroughs-launches-trends/" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/aiapps.com/6a4639bef6643716137b72e7-1782989344302.jpg" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g1">🧠</div></div>
+<div class="card-body"><div class="card-title">Claude Sonnet 5 发布：Agent 编码进入主流</div>
+<div class="card-desc">Anthropic 推出迄今最具"智能体"能力的 Sonnet 5，可自主操作浏览器与终端，性能接近 Opus 4.8。限时定价 $2/$10（每百万输入/输出 tokens），8月31日后恢复 $3/$15。7月大盘主线：模型更好用、访问更受控、算力开支更大。</div>
+<div class="card-meta"><span class="src">AIapps</span><span>07-02</span></div></div></a>
 
-    <a class="card" href="https://www.aiapps.com/blog/top-ai-news-july-breakthroughs-launches-trends/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/aiapps.com/6a4639bef6643716137b72e7-1782989344302.jpg" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g2">🧠</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">AIapps</span></div>
-        <h3>Claude Sonnet 5 发布：智能体编码走向主流</h3>
-        <p>Anthropic 发布 Claude Sonnet 5，主打智能体编码与多步骤工作流，接近 Opus 级推理但价格更低：8月31日前每百万 token 输入/输出仅 $2/$10。已成为所有 Claude 套餐默认模型，保险科技公司 Pace 已将其用于生产环境理赔流程。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.ghacks.net/2026/07/14/anthropic-extends-free-claude-fable-5-access-for-paid-subscribers-through-july-19/" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://www.ghacks.net/wp-content/uploads/2026/07/gHacks-articles-2026-07-14T105543.553.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g1">🎁</div></div>
+<div class="card-body"><div class="card-title">Claude Fable 5 免费试用延长至 7 月 19 日</div>
+<div class="card-desc">Anthropic 第三次延长 Fable 5 对 Pro/Max/Team 付费用户的免费开放（限每周额度的 50%），Claude Code 周限额同步上调 50%。此前 Fable 5 曾因出口管制被短暂暂停后恢复，多次延期显示官方仍在权衡算力与长期定价方案。</div>
+<div class="card-meta"><span class="src">gHacks</span><span>07-14</span></div></div></a>
 
-    <a class="card" href="https://www.aiapps.com/blog/july-ai-mega-update-major-breakthroughs-launches/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/aiapps.com/6a503dec21d1dee3314b9573-1783647664321.jpg" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g2">🚀</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">AIapps</span></div>
-        <h3>GPT-5.6 三箭齐发：Sol / Terra / Luna 组团上场</h3>
-        <p>OpenAI 推出 GPT-5.6 系列：Sol 主攻高端推理与编码（$5/$30），Terra 以一半成本对标 GPT-5.5，Luna 面向高速低价场景。同期 xAI Grok 4.5（1.5万亿参数 MoE）与 Meta Muse Spark 1.1（百万 token 上下文）同台竞技，7月9日三大实验室同日出招。</p>
-      </div>
-    </a>
+<a class="card" href="https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://techcrunch.com/wp-content/uploads/2024/07/microsoft-logo-office-e1735933827774.jpg?resize=1200,799" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g2">🏢</div></div>
+<div class="card-body"><div class="card-title">微软斥资 25 亿美元成立 AI 部署公司 Frontier</div>
+<div class="card-desc">Microsoft Frontier Company 配备 6000 名工程与行业专家，专攻企业级 AI 落地，首批客户含伦交所集团、联合利华、埃森哲。此前两天 AWS 刚宣布 10 亿美元同类计划，OpenAI 与 Anthropic 也已布局——"前线部署工程"成大厂新战场。</div>
+<div class="card-meta"><span class="src">TechCrunch</span><span>07-02</span></div></div></a>
 
-    <a class="card" href="https://www.zonetechify.com/blog/ai-news-july-2026-latest-ai-developments" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://zonetechify.com/images/blog/ai-news-july-2026-latest-ai-developments.webp" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g4">🎬</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">ZoneTechify</span></div>
-        <h3>谷歌 Video Remix 上线：Photos 里直接 AI 剪片</h3>
-        <p>谷歌7月8日向 AI Plus/Pro/Ultra 订阅用户开放 Video Remix，基于 Google Photos 内的 Gemini 编辑10秒短片，支持重打光、换背景与风格化特效；同期 Gemini Omni Flash 以每秒视频 $0.10 提供对话式视频编辑，创作门槛大幅降低。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.buildfastwithai.com/blogs/ai-news-today-july-12-2026" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://oukdqujzonxvqhiefdsv.supabase.co/storage/v1/object/public/blogs/88cba0a9-da4e-4e8b-bb14-d3ae81287222.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g1">📰</div></div>
+<div class="card-body"><div class="card-title">GPT-5.6 三档齐发，OpenAI 推 ChatGPT Work</div>
+<div class="card-desc">OpenAI 将 GPT-5.6 拆为 Sol（高端推理，$5/$30）、Terra（半价对标 5.5）、Luna（高并发低成本）三条线；同时推出 ChatGPT Work，把 Codex 并入桌面端并带 15 个集成插件目录。Sol 目前仅向约 20 家获批机构开放预览。</div>
+<div class="card-meta"><span class="src">BuildFastWithAI</span><span>07-12</span></div></div></a>
 
-    <a class="card" href="https://blog.mean.ceo/ai-product-launches-news-july-2026/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://blog.mean.ceo/wp-content/uploads/2025/12/mean-ceo-female-entrepreneurs-news.webp" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g3">🎙️</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">Mean CEO Blog</span></div>
-        <h3>OpenAI Flex 分级计费 &amp; Willow.ai 语音新王者</h3>
-        <p>OpenAI 推出 Flex processing 低价档，将慢任务与实时任务分级计费，重塑 AI 单位经济学；Willow.ai 发布对标 ElevenLabs、Deepgram 的语音转写模型 Atlas-1。语音正从"功能"升级为独立的企业级业务层，AI 加速嵌入日常工作流。</p>
-      </div>
-    </a>
+<a class="card" href="https://techcrunch.com/2026/07/09/anthropic-openai-and-spacex-are-bigger-than-the-last-25-years-of-tech-exits/" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://techcrunch.com/wp-content/uploads/2024/07/ai-deals.jpg?resize=1200,675" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g5">💰</div></div>
+<div class="card-body"><div class="card-title">三大 IPO 超过去 25 年美国科技退出总和</div>
+<div class="card-desc">Pitchbook 报告：SpaceX（已上市，估值 1.77 万亿美元）+ 即将 IPO 的 Anthropic 与 OpenAI，合计价值或超 4 万亿美元，超过 2000 年以来全部美国 VC 支持的退出总额。OpenAI 拟 9 月上市，私募估值约 7300 亿美元。</div>
+<div class="card-meta"><span class="src">TechCrunch</span><span>07-09</span></div></div></a>
 
-  </div>
-</section>
+</div></section>
 
-<!-- Section 2 -->
 <section>
-  <h2>⌚ AI 穿戴设备</h2>
-  <div class="sec-desc">眼镜 · 耳机 · 戒指 · 新形态硬件</div>
-  <div class="grid">
+<h2>⌚ AI 穿戴设备</h2>
+<div class="grid">
 
-    <a class="card" href="https://www.ghacks.net/2026/06/24/meta-launches-self-branded-smart-glasses-starting-at-299-with-new-muse-spark-ai-assistant/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://www.ghacks.net/wp-content/uploads/2026/06/gHacks-articles-2026-06-24T134456.691.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g2">🕶️</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">gHacks</span></div>
-        <h3>Meta 首款自有品牌智能眼镜：$299 起售</h3>
-        <p>Meta 推出首款自有品牌智能眼镜，起售价 $299，搭载全新 Muse Spark AI 助手，摆脱对 Ray-Ban 联名的依赖；此前 $799 的 Ray-Ban Display 已配彩色镜内显示与 Neural Band 手势腕带，Meta 眼镜产品线全面铺开。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.cnbc.com/2026/06/23/meta-glasses-are-new-smart-glasses-starting-at-299.html" target="_blank">
+<div class="card-ph g6">🕶️</div>
+<div class="card-body"><div class="card-title">Meta 发布 299 美元自有品牌智能眼镜</div>
+<div class="card-desc">Meta 推出比 Ray-Ban 系列更便宜的入门款智能眼镜，起价 299 美元，扎克伯格继续加码穿戴赛道。眼镜日活用户同比增长三倍，产品线现覆盖 $299 至约 $800（带显示屏 Ray-Ban Display + 神经腕带）。</div>
+<div class="card-meta"><span class="src">CNBC</span><span>06-23</span></div></div></a>
 
-    <a class="card" href="https://www.ghacks.net/2026/06/04/microsoft-unveils-wearable-ai-badge-and-desk-cube-hardware-concepts-at-build-2026/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://www.ghacks.net/wp-content/uploads/2026/06/gHacks-articles-2026-06-04T105341.393.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g4">📛</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">gHacks</span></div>
-        <h3>微软 Build 2026 秀 AI 工牌与桌面立方体</h3>
-        <p>微软展示两款 AI 硬件原型：带摄像头与指纹传感器的可穿戴工牌，可夹在衣物上让 AI 智能体"看见"周围环境；以及配触屏与语音的桌面立方体。纳德拉称之为"新形态计算"，目前由数百名员工内测，隐私争议随之而来。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.thestreet.com/technology/meta-smart-glasses-always-on-feature-privacy-concerns" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://www.thestreet.com/.image/NDA6MDAwMDAwMDAzMTA3MTUx/mobile-world-congress.jpg?profile=share16-9" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g6">👁️</div></div>
+<div class="card-body"><div class="card-title">Meta"超级感知"眼镜引爆隐私争议</div>
+<div class="card-desc">FT 爆料 Meta 正测试"super sensing"原型：持续录音 + 每隔几秒自动拍照，且计划不点亮提示 LED。而就在前一天 Meta 刚推送强制更新——LED 被遮挡即禁用相机。Reality Labs 累计亏损已超 800 亿美元，眼镜是唯一爆款。</div>
+<div class="card-meta"><span class="src">TheStreet</span><span>07-09</span></div></div></a>
 
-    <a class="card" href="https://www.plaud.ai/blogs/articles/9-life-changing-ai-wearable-devices-in-2026" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://www.plaud.ai/cdn/shop/articles/Plaud-Blogs-9_Life-Changing_AI_Wearable_Devices_in_2026-020926_3211facb-26a4-4572-8074-359cbb724b8c.webp?v=1772761732" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g3">🎧</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">PLAUD</span></div>
-        <h3>2026 年 9 款改变生活的 AI 穿戴设备盘点</h3>
-        <p>PLAUD 盘点2026年最具代表性的 AI 穿戴设备：Ray-Ban Meta 眼镜领跑消费市场，Limitless 吊坠（100小时待机，已被 Meta 收购）验证环境 AI 落地，AI 录音卡片、智能戒指等品类全面开花——如今每5款新穿戴设备就有2款内置 AI。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.ghacks.net/2026/06/04/microsoft-unveils-wearable-ai-badge-and-desk-cube-hardware-concepts-at-build-2026/" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://www.ghacks.net/wp-content/uploads/2026/06/gHacks-articles-2026-06-04T105341.393.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g2">📛</div></div>
+<div class="card-body"><div class="card-title">微软展示可穿戴 AI 徽章与桌面魔方</div>
+<div class="card-desc">Build 2026 上微软亮出两款概念硬件：带摄像头与指纹识别的可穿戴 AI 徽章（可别在衣服或挂颈），以及带触屏语音的桌面立方体。纳德拉称之为"新形态计算"，目前数百名员工内测，商用化时间未定。</div>
+<div class="card-meta"><span class="src">gHacks</span><span>06-04</span></div></div></a>
 
-    <a class="card" href="https://www.kickstarter.com/projects/halliday-ai-glasses/halliday-proactive-ai-glasses-with-invisible-display" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://i.kickstarter.com/assets/048/444/641/38ab2e0b5774f708d3ce9fb9d4d2a4e4_original.jpeg?anim=false&fit=cover&gravity=auto&height=873&origin=ugc&q=92&v=1741438038&width=1552&sig=RNUduODzeBMzrkPdoOoUp%2F99OuWE%2F1izcOmgUCT9raw%3D" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g2">👓</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">Kickstarter</span></div>
-        <h3>Halliday 主动式 AI 眼镜：众筹斩获 $330 万</h3>
-        <p>Halliday 主动式 AI 眼镜获 8023 名支持者、$330万众筹：35克超轻、"隐形"近眼显示、AI 实时翻译、隐形提词板与戒指控制，主打 AI 主动预判需求而非被动应答，现已转入正式发售，代表 AI 眼镜从概念走向量产。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.wareable.com/wearable-tech/mwc-2026-best-wearables-ai-hardware-announcements-of-the-show" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://media.wareable.com/images/featured-big/2026/03/mwc-2026-generic-1.jpg" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g4">⌚</div></div>
+<div class="card-body"><div class="card-title">Snapdragon Wear Elite：腕上 AI 的转折点</div>
+<div class="card-desc">Wareable 盘点 MWC 2026：高通 Wear Elite 采用 3nm 工艺 + 专用 NPU，可在手表端侧跑十亿参数模型，CPU 性能提升 5 倍、续航改善 30%。三星 Buds 4 Pro（22 语种实时翻译）、时空壶 W4 骨传导翻译耳机等同场亮相。</div>
+<div class="card-meta"><span class="src">Wareable</span><span>03-06</span></div></div></a>
 
-    <a class="card" href="https://www.wareable.com/wearable-tech/mwc-2026-best-wearables-ai-hardware-announcements-of-the-show" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://media.wareable.com/images/featured-big/2026/03/mwc-2026-generic-1.jpg" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g4">🌐</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">Wareable</span></div>
-        <h3>MWC 2026 十大穿戴亮点：AI 上腕、上耳、上眼</h3>
-        <p>Wareable 评选 MWC 2026 穿戴亮点：高通 Snapdragon Wear Elite（3nm 工艺+腕上 NPU，可跑十亿参数模型）最重磅；三星 Buds 4 Pro 支持22语实时翻译与头部手势；TimeKettle W4 骨传导翻译耳机、Xpanceo 智能隐形眼镜齐登场。</p>
-      </div>
-    </a>
+<a class="card" href="https://36kr.com/p/3571198300289921" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://img.36krcdn.com/hsossms/20251127/v2_1f77887c0a4b46279bc9c683ca169e40@000000_oswg23459oswg385oswg385_img_000?x-oss-process=image/resize,m_mfit,w_600,h_400,limit_0/crop,w_600,h_400,g_center" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g4">👓</div></div>
+<div class="card-body"><div class="card-title">谷歌 AI 眼镜或 2026 Q4 发布：富士康代工、三星设计</div>
+<div class="card-desc">36氪《智能涌现》独家：谷歌两个 AI 眼镜项目已进入 POC 小批量试产，富士康代工、三星提供参考设计、高通供芯片，大概率采用波导光学 + 摄像头方案。手握 Gemini + Android XR 生态的谷歌，被业内视为"没有短板的全能选手"。</div>
+<div class="card-meta"><span class="src">36氪</span><span>中文媒体</span></div></div></a>
 
-  </div>
-</section>
+</div></section>
 
-<!-- Section 3 -->
 <section>
-  <h2>🔩 AI 芯片 &amp; 硬件</h2>
-  <div class="sec-desc">NPU · 推理芯片 · 供应链</div>
-  <div class="grid">
+<h2>🔩 AI 芯片 &amp; 硬件</h2>
+<div class="grid">
 
-    <a class="card" href="https://futurumgroup.com/insights/qualcomm-unveils-future-of-intelligence-at-ces-2026-pushes-the-boundaries-of-on-device-ai/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://futurumgroup.com/wp-content/uploads/2026/01/Qualcomm-Unveils-Future-of-Intelligence-at-CES-2026-Pushes-the-Boundaries-of-On-Device-AI.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g1">⚙️</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">Futurum</span></div>
-        <h3>高通 Snapdragon X2 Plus：80 TOPS NPU 押注代理式 PC</h3>
-        <p>高通发布 Snapdragon X2 Plus PC 芯片，NPU 算力达 80 TOPS，主打"代理式"体验让 PC 自主执行复杂任务；同场 Dragonwing IQ10 18核机器人平台进军人形机器人，Figure 已采用，端侧 AI 从手机全面扩展到 PC、汽车与机器人。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.ghacks.net/2026/07/13/samsung-develops-dedicated-gaia-ai-chip-for-pcs-with-hp-and-lenovo-testing-prototypes/" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://www.ghacks.net/wp-content/uploads/2026/07/gHacks-articles-2026-07-13T103344.423.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g3">🔩</div></div>
+<div class="card-body"><div class="card-title">三星秘研 PC 端 AI 芯片"GAIA"，惠普联想已测原型</div>
+<div class="card-desc">韩媒曝三星 LSI 部门开发 4nm 级"存算一体"AI 加速器 GAIA，定位 CPU 旁路协处理器，专跑端侧大模型、实时翻译与图像生成，或结合 PIM 存内计算。HP 与联想已在测试原型，最快 2027 量产——三星时隔十余年重返 PC 芯片。</div>
+<div class="card-meta"><span class="src">gHacks</span><span>07-13</span></div></div></a>
 
-    <a class="card" href="https://windowsnews.ai/article/npus-storm-windows-pcs-the-2026-ai-chip-showdown-redrawing-cloud-economics.430865" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://windowsnews.ai/img-proxy.php?u=HzoVOUEKHRkPIh4oGDkSL11CR1tWKB8hWC8VPVNTWlsdJQQ_WDkIJ1ZfRUUeJAI5GmMAIB9TWl8IOF0lGWNTeQAGH1EIPl06BGMVOUcdREVVJQA5WjgSZFNDW1VVLR8-WjkIJ1ZfRUVVOxM_Wi8PLR9TXlkNL10vGD0VOhxHV1QIZUF5T3lWeB0&size=large&format=webp" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g1">💻</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">Windows News</span></div>
-        <h3>NPU 成 Windows 标配：四路芯片混战重写云经济学</h3>
-        <p>2026年 NPU 已如摄像头般成为 Windows 笔记本标配：Intel/AMD/高通全平台集成 40+ TOPS NPU，本地推理让 AI 视频通话功耗降低90%；万人规模企业把80%推理搬到端侧，云账单可从每年 $500万 砍到 $100万，推理全面"边缘化"。</p>
-      </div>
-    </a>
+<a class="card" href="https://futurumgroup.com/insights/qualcomm-unveils-future-of-intelligence-at-ces-2026-pushes-the-boundaries-of-on-device-ai/" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://futurumgroup.com/wp-content/uploads/2026/01/Qualcomm-Unveils-Future-of-Intelligence-at-CES-2026-Pushes-the-Boundaries-of-On-Device-AI.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g3">📶</div></div>
+<div class="card-body"><div class="card-title">高通 Snapdragon X2 Plus：80 TOPS NPU 主打"智能体 PC"</div>
+<div class="card-desc">高通 CES 2026 发布 X2 Plus PC 芯片，Hexagon NPU 达 80 TOPS，主打让 PC 自主执行复杂任务的 agentic 体验；另推 18 核 Dragonwing IQ10 机器人平台（Figure 人形机器人已采用）及大众集团 SDV 合作。端侧 AI 军备竞赛白热化。</div>
+<div class="card-meta"><span class="src">Futurum</span><span>01-16</span></div></div></a>
 
-    <a class="card" href="https://futurumgroup.com/insights/jalapeo-in-nine-months-did-ai-just-break-chip-design-timelines/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://futurumgroup.com/wp-content/uploads/2026/06/stock_0289-1024x576.png.webp" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g1">🌶️</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">Futurum</span></div>
-        <h3>OpenAI × 博通 "Jalapeño"：9 个月流片破纪录</h3>
-        <p>OpenAI 与博通合作的推理芯片 "Jalapeño" 仅用9个月完成流片，创下行业纪录：AI 辅助设计与先进封装大幅压缩芯片设计周期，专为 LLM 推理负载打造、主打每瓦性能——AI 设计芯片、芯片再加速 AI 的飞轮正在成型。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.cnbc.com/2026/06/02/nvidias-new-pc-chips-are-ceos-bid-to-own-every-part-of-ai-stack.html" target="_blank">
+<div class="card-ph g5">💻</div>
+<div class="card-body"><div class="card-title">英伟达进军 Windows PC 芯片，通吃 AI 全栈</div>
+<div class="card-desc">英伟达发布面向 Windows 笔记本的新 PC 芯片，黄仁勋意图从数据中心到消费终端占据 AI 每一层。数据中心侧 Blackwell 下半年放量；AMD 则拿下 OpenAI MI450 五年供货 + Meta 600 亿美元 MI400 大单，年内股价大涨约 150%。</div>
+<div class="card-meta"><span class="src">CNBC</span><span>06-02</span></div></div></a>
 
-    <a class="card" href="https://www.ghacks.net/2026/06/29/memory-prices-expected-to-rise-up-to-50-in-q3-with-no-relief-until-2028-jefferies-predicts/" target="_blank" rel="noopener">
-      <div class="card-img-wrap"><img class="card-img" src="https://www.ghacks.net/wp-content/uploads/2026/06/gHacks-articles-2026-06-29T163343.686.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g1">💾</div></div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-src">gHacks</span></div>
-        <h3>AI 吞噬内存：Q3 价格或暴涨 50%，2028 年前难缓解</h3>
-        <p>Jefferies 预测内存价格 Q3 最高上涨50%，2028年前难有缓解：AI 数据中心对 HBM 与 DRAM 的吞噬式需求挤压消费电子供给。苹果已因内存成本上调 iPad/MacBook 售价，库克确认 iPhone 或涨价超 $200，AI 硬件红利正传导为全民成本。</p>
-      </div>
-    </a>
+<a class="card" href="https://etcjournal.com/2026/07/07/neural-processing-unit-npu-hype-or-next-step-for-pcs/" target="_blank">
+<div class="card-img-wrap"><img class="card-img" src="https://etcjournal.com/wp-content/uploads/2026/07/chatgpt-image-jul-7-2026-04_32_33-pm2.png" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-ph g3">⚙️</div></div>
+<div class="card-body"><div class="card-title">NPU 全面攻占 PC：40+ TOPS 成 2026 标配</div>
+<div class="card-desc">2026 年 Intel、AMD、高通全平台标配 40+ TOPS NPU，Windows 11/12 围绕神经硬件重构，Adobe、DaVinci、Zoom 均已调用 NPU API。NPU 从参数表冷知识变成今夏卖场头条——但"哪些任务真的需要它"仍是用户最大疑问。</div>
+<div class="card-meta"><span class="src">ETC Journal</span><span>07-07</span></div></div></a>
 
-  </div>
-</section>
+</div></section>
 
-<!-- Section 4 -->
 <section>
-  <h2>🇨🇳 中文社区声音</h2>
-  <div class="sec-desc">知乎 · 微博 · 中文爆料与观点</div>
-  <div class="grid">
+<h2>🇨🇳 中文社区声音</h2>
+<div class="grid">
 
-    <a class="card" href="https://zhuanlan.zhihu.com/p/2033821357394366898" target="_blank" rel="noopener">
-      <div class="card-ph g1">💠</div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-zhihu">知乎</span></div>
-        <h3>华为昇腾 950PR 量产：直逼 H200 的国产算力</h3>
-        <p>知乎行业动态追踪：华为昇腾 950PR 已于3月量产，7nm 工艺、FP16 算力 800 TFLOPS，性能直逼英伟达 H200，可支撑万亿参数大模型集群训练，并锁定全年多数订单；2026年国产 AI 芯片营收预计达 $120亿，同比增长60%。</p>
-      </div>
-    </a>
+<a class="card" href="https://zhuanlan.zhihu.com/p/2053614562792960208" target="_blank">
+<div class="card-ph g4">🌐</div>
+<div class="card-body"><div class="card-title">全球 AI 前沿动态：端侧智能体成最确定方向</div>
+<div class="card-desc">知乎专栏日更盘点：AI 正全面下沉至终端设备、成为随身智能体，被认为是最确定的大规模应用方向。CES 2026 上 AI 硬件成绝对主角，联想等 AI PC 内置专用 NPU 本地跑大模型，AI 原生设备与智能眼镜/耳机争夺下一代交互入口。</div>
+<div class="card-meta"><span class="pchip zhihu">知乎</span><span class="src">专栏观点</span></div></div></a>
 
-    <a class="card" href="https://zhuanlan.zhihu.com/p/2035757117223776315" target="_blank" rel="noopener">
-      <div class="card-ph g4">🕶️</div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-zhihu">知乎</span></div>
-        <h3>2026 AI 眼镜盘点：新品井喷，巨头混战</h3>
-        <p>知乎盘点2026 AI 眼镜市场：全年已发布31款新品，含4款音频眼镜、7款拍摄眼镜与20款 AI+AR 眼镜；全球出货量超2369万副、AI 化率78%，中国贡献21%市场份额。新品井喷之下，互联网巨头与创业公司混战正酣。</p>
-      </div>
-    </a>
+<a class="card" href="https://zhuanlan.zhihu.com/p/2009681321455268012" target="_blank">
+<div class="card-ph g3">🚀</div>
+<div class="card-body"><div class="card-title">2026 国产 AI 芯片：从"推理"迈向"训练"</div>
+<div class="card-desc">知乎热文分析：国产 AI 芯片正处在从"能用"到"好用"的关键阶段。华为昇腾 910C 已量产，7nm 工艺 FP16 算力达 800 TFLOPS、逼近英伟达 H200，足以支撑万亿参数集群训练；寒武纪 MLU590 对标 A100，在视频与边缘计算占据一席。</div>
+<div class="card-meta"><span class="pchip zhihu">知乎</span><span class="src">专栏观点</span></div></div></a>
 
-    <a class="card" href="https://zhuanlan.zhihu.com/p/2009681321455268012" target="_blank" rel="noopener">
-      <div class="card-ph g3">🔬</div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-zhihu">知乎</span></div>
-        <h3>国产 AI 芯片跨越天堑：从"推理"走向"训练"</h3>
-        <p>知乎热文《2026，国产AI芯片，跨越天堑》：国产芯片正从推理场景向训练场景突破，GPGPU、ASIC、Chiplet 多技术路线并行；寒武纪 MLU590 综合性能对标 A100 并已用于文心一言，国产替代从"能用"迈向"好用"的关键之年。</p>
-      </div>
-    </a>
+<a class="card" href="https://zhuanlan.zhihu.com/p/2033821357394366898" target="_blank">
+<div class="card-ph g1">📈</div>
+<div class="card-body"><div class="card-title">华为昇腾 950PR 量产，AI 芯片营收剑指 120 亿美元</div>
+<div class="card-desc">知乎行业动态：昇腾 950PR 已于 2026 年 3 月量产并锁定全年大部分订单，升级版 950DT 计划 Q4 推出；2026 年华为 AI 芯片营收预计达 120 亿美元、同比增长 60%。国产算力在出口管制背景下持续放量。</div>
+<div class="card-meta"><span class="pchip zhihu">知乎</span><span class="src">行业动态</span></div></div></a>
 
-    <a class="card" href="https://zhuanlan.zhihu.com/p/1993009369168757105" target="_blank" rel="noopener">
-      <div class="card-ph g2">👓</div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-zhihu">知乎</span></div>
-        <h3>CES 2026 AI 智能眼镜观察：国产军团集体亮相</h3>
-        <p>知乎 CES 2026 观察：AI 智能眼镜成展会最大热点，KTC 多模态交互眼镜支持16语翻译，亮亮视界 Leion Hey2 主打 AR 翻译，Rokid、韶音 OpenVision 等国产厂商集体出海亮相；巴克莱预测智能眼镜2035年销量将达6000万副。</p>
-      </div>
-    </a>
+<a class="card" href="https://www.zhihu.com/question/1979589960937001664" target="_blank">
+<div class="card-ph g6">👓</div>
+<div class="card-body"><div class="card-title">热议：AI 眼镜和 AI 耳机，谁先成为现象级产品？</div>
+<div class="card-desc">知乎热榜问题：2026 年已亮相 31 款 AI 眼镜（AI+AR 占 20 款），全球出货量预计突破 2000 万台、增速超 200%；Rokid 49g 全功能 AI+AR 眼镜、苹果 AirPods Ultra 3 端侧大模型实时翻译也在讨论中。多数答主押注眼镜，但吐槽 AI 戒指创新停留表面。</div>
+<div class="card-meta"><span class="pchip zhihu">知乎</span><span class="src">热榜问答</span></div></div></a>
 
-    <a class="card" href="https://weibo.com/a/hot/fc6eff33e05b79c0_0.html?type=grab" target="_blank" rel="noopener">
-      <div class="card-ph g5">📱</div>
-      <div class="card-body">
-        <div class="chips"><span class="chip chip-weibo">微博</span></div>
-        <h3>赛豆科技品牌发布会引热议：AI 硬件新玩家入场</h3>
-        <p>微博热议：赛豆科技6月9日举办品牌发布会，发布多款 AI 硬件新品引发关注；微博智搜上"AI大模型""AI硬件穿戴"等话题持续升温，国产 AI 穿戴新品牌正借社交平台快速出圈，AI 硬件创业热度不减。</p>
-      </div>
-    </a>
+</div></section>
 
-  </div>
-</section>
-
-<footer>
-  ⚡ AI 产品日报 · 由 Claude AI 每日自动聚合生成 · 资讯摘要仅供参考，请以原文为准 · 2026-07-14
-</footer>
-
+<footer>⚡ AI 产品日报 · 由 Claude AI 每日自动聚合生成 · 2026-07-15 · 内容摘要由 AI 生成，点击卡片阅读原文</footer>
 </div>
 </body>
 </html>
